@@ -25,7 +25,7 @@ namespace Final_Project
         private void btnAdd_Click(object sender, EventArgs e)
         {
             NewPersonForm ui = new NewPersonForm(this);
-            _PersonForm.ShowDialog();
+            
             
             
             

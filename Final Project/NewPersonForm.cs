@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 
 namespace Final_Project
 {
-    public partial class NewPersonForm : Form
+    public partial class NewPersonForm : UserControl
     {
         private Form _mainForm;
         public NewPersonForm(Form form)

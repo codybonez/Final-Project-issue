@@ -36,14 +36,16 @@
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dOBDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             personBindingSource = new BindingSource(components);
+            personBindingSource1 = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)personBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)personBindingSource1).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(265, 9);
+            lblTitle.Location = new Point(225, 13);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(210, 15);
             lblTitle.TabIndex = 0;
@@ -62,7 +64,6 @@
             // 
             // dgvList
             // 
-            dgvList.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dgvList.AutoGenerateColumns = false;
             dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvList.Columns.AddRange(new DataGridViewColumn[] { ageDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, dOBDataGridViewTextBoxColumn });
@@ -97,6 +98,10 @@
             // 
             personBindingSource.DataSource = typeof(Person);
             // 
+            // personBindingSource1
+            // 
+            personBindingSource1.DataSource = typeof(Person);
+            // 
             // Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -110,6 +115,7 @@
             Text = "Registry";
             ((System.ComponentModel.ISupportInitialize)dgvList).EndInit();
             ((System.ComponentModel.ISupportInitialize)personBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)personBindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,11 +123,12 @@
         #endregion
 
         private Label lblTitle;
-        private Button btnAdd;
         private DataGridView dgvList;
+        private BindingSource personBindingSource;
+        private BindingSource personBindingSource1;
+        private Button btnAdd;
         private DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
-        private BindingSource personBindingSource;
     }
 }
