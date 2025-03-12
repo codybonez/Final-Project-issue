@@ -40,6 +40,7 @@
             btnSave = new Button();
             lbl_Name = new Label();
             lbl_DOB = new Label();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // lblDOB
@@ -144,6 +145,16 @@
             lbl_DOB.TabIndex = 13;
             lbl_DOB.Text = "*Insert DOB here*";
             // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(374, 138);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(208, 64);
+            btnClear.TabIndex = 14;
+            btnClear.Text = "Clear Form";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // NewPerson
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -151,6 +162,7 @@
             AutoSize = true;
             BackColor = Color.Teal;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClear);
             Controls.Add(lbl_DOB);
             Controls.Add(lblDOB);
             Controls.Add(lbl_Age);
@@ -183,5 +195,6 @@
         private Button btnSave;
         private Label lbl_Name;
         private Label lbl_DOB;
+        private Button btnClear;
     }
 }

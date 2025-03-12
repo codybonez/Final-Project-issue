@@ -66,9 +66,23 @@ namespace Final_Project
             txt_DOB.Text = person.DOB;
         }
 
+        private void ClearForm()
+        {
+            txtName.Text = "";
+            txt_Age.Text = "";
+            txt_DOB.Text = "";
+        }
+
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             createPerson();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearForm(); 
         }
     }
 }
