@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPerson));
             lblDOB = new Label();
             lbl_Age = new Label();
             lblName = new Label();
@@ -160,7 +161,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.Teal;
+            BackColor = Color.DarkSlateGray;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
             Controls.Add(btnClear);
             Controls.Add(lbl_DOB);

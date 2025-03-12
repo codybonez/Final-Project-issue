@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             lblTitle = new Label();
             btnAdd = new Button();
             dgvList = new DataGridView();
@@ -44,6 +45,7 @@
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitle.AutoSize = true;
             lblTitle.BackColor = Color.White;
             lblTitle.Location = new Point(225, 13);
@@ -54,7 +56,6 @@
             // 
             // btnAdd
             // 
-            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnAdd.Location = new Point(522, 5);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(127, 23);
@@ -65,8 +66,9 @@
             // 
             // dgvList
             // 
+            dgvList.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dgvList.AutoGenerateColumns = false;
-            dgvList.BackgroundColor = Color.SlateGray;
+            dgvList.BackgroundColor = Color.DarkSlateGray;
             dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvList.Columns.AddRange(new DataGridViewColumn[] { ageDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, dOBDataGridViewTextBoxColumn });
             dgvList.DataSource = personBindingSource;
@@ -110,6 +112,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.Teal;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
             Controls.Add(dgvList);
             Controls.Add(btnAdd);
