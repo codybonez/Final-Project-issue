@@ -54,6 +54,7 @@
             // lbl_Age
             // 
             lbl_Age.AutoSize = true;
+            lbl_Age.BackColor = Color.White;
             lbl_Age.Location = new Point(90, 107);
             lbl_Age.Name = "lbl_Age";
             lbl_Age.Size = new Size(94, 15);
@@ -105,7 +106,6 @@
             txt_Age.Name = "txt_Age";
             txt_Age.Size = new Size(238, 23);
             txt_Age.TabIndex = 8;
-            
             // 
             // txt_DOB
             // 
@@ -113,7 +113,6 @@
             txt_DOB.Name = "txt_DOB";
             txt_DOB.Size = new Size(238, 23);
             txt_DOB.TabIndex = 9;
-            
             // 
             // btnSave
             // 
@@ -123,10 +122,12 @@
             btnSave.TabIndex = 10;
             btnSave.Text = "Click here to complete registration";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // lbl_Name
             // 
             lbl_Name.AutoSize = true;
+            lbl_Name.BackColor = Color.White;
             lbl_Name.Location = new Point(90, 31);
             lbl_Name.Name = "lbl_Name";
             lbl_Name.Size = new Size(105, 15);
@@ -136,6 +137,7 @@
             // lbl_DOB
             // 
             lbl_DOB.AutoSize = true;
+            lbl_DOB.BackColor = Color.White;
             lbl_DOB.Location = new Point(90, 187);
             lbl_DOB.Name = "lbl_DOB";
             lbl_DOB.Size = new Size(99, 15);
@@ -147,6 +149,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            BackColor = Color.Teal;
             ClientSize = new Size(800, 450);
             Controls.Add(lbl_DOB);
             Controls.Add(lblDOB);

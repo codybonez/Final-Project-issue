@@ -45,6 +45,7 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
+            lblTitle.BackColor = Color.White;
             lblTitle.Location = new Point(225, 13);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(210, 15);
@@ -65,6 +66,7 @@
             // dgvList
             // 
             dgvList.AutoGenerateColumns = false;
+            dgvList.BackgroundColor = Color.SlateGray;
             dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvList.Columns.AddRange(new DataGridViewColumn[] { ageDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, dOBDataGridViewTextBoxColumn });
             dgvList.DataSource = personBindingSource;
@@ -102,16 +104,17 @@
             // 
             personBindingSource1.DataSource = typeof(Person);
             // 
-            // Form
+            // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            BackColor = Color.Teal;
             ClientSize = new Size(800, 450);
             Controls.Add(dgvList);
             Controls.Add(btnAdd);
             Controls.Add(lblTitle);
-            Name = "Form";
+            Name = "Register";
             Text = "Registry";
             ((System.ComponentModel.ISupportInitialize)dgvList).EndInit();
             ((System.ComponentModel.ISupportInitialize)personBindingSource).EndInit();

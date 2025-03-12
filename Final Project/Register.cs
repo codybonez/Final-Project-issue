@@ -37,6 +37,12 @@ namespace Final_Project
               dgvList.DataSource = _person;
 
         }
+        public void addPerson(Person person)
+        {
+            _person.Add(person);
+            ReloadDataGrid();
+        }
+
 
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

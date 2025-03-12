@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class NewPerson: Form
+    public partial class NewPerson : Form
     {
         private Register register;
+        private int PersonCount;
         public NewPerson(Register form)
         {
             InitializeComponent();
             register = form;
+            PersonCount = 1;
         }
         private bool CheckValidity(Control control)
         {
@@ -50,7 +52,8 @@ namespace Final_Project
                 DOB = txt_DOB.Text,
             };
 
-            
+            register.addPerson(person);
+            PersonCount++;
         }
 
 
@@ -61,6 +64,11 @@ namespace Final_Project
             txtName.Text = person.name;
             txt_Age.Text = person.age;
             txt_DOB.Text = person.DOB;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            createPerson();
         }
     }
 }
