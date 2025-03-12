@@ -13,15 +13,15 @@ namespace Final_Project
 {
     public partial class NewPersonForm : UserControl
     {
-        private Form _mainForm;
-        public NewPersonForm(Form form)
+        private Register _mainForm;
+        public NewPersonForm(Register form)
         {
             InitializeComponent();
             _mainForm = form;
         }
         private bool CheckValidity(Control control)
         {
-           
+
 
 
 
@@ -35,7 +35,7 @@ namespace Final_Project
 
                 MessageBox.Show("please enter your name");
                 return;
-              
+
             }
             if (CheckValidity(txtAge))
             {
@@ -56,9 +56,9 @@ namespace Final_Project
         }
         public void LoadCustomer(Person person)
         {
-          
+
             txtName.Text = person.name;
-           txtAge.Text = person.age;
+            txtAge.Text = person.age;
             txtDOB.Text = person.DOB;
         }
 
@@ -87,6 +87,9 @@ namespace Final_Project
 
         }
 
-       
+        private void lblDOB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

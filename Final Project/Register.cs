@@ -1,31 +1,31 @@
 namespace Final_Project
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class Register : Form
     {
-        private NewPersonForm _PersonForm;
+        private NewPerson _PersonForm;
         private List<Person> _person;
        
         private int PersonCount;
 
 
 
-        public Form()
+        public Register()
         {
             InitializeComponent();
            
-            _PersonForm = new NewPersonForm(this);
+            _PersonForm = new NewPerson(this);
             _person = new List<Person>();
             _person.Add(new Person { name = "Test", age = "0", DOB = "1/1/2005" });
             ReloadDataGrid();
         }
         public static void AddRegister(Person person)
         {
-          
+        
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             NewPersonForm ui = new NewPersonForm(this);
-            
+            _PersonForm.ShowDialog();
             
             
             

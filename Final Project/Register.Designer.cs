@@ -1,6 +1,6 @@
 ﻿namespace Final_Project
 {
-    partial class Form
+    partial class Register
     {
         /// <summary>
         ///  Required designer variable.

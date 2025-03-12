@@ -79,6 +79,7 @@
             lblName.Size = new Size(105, 15);
             lblName.TabIndex = 4;
             lblName.Text = "*Insert name here*";
+           
             // 
             // lblAge
             // 
@@ -88,6 +89,7 @@
             lblAge.Size = new Size(94, 15);
             lblAge.TabIndex = 5;
             lblAge.Text = "*Insert age here*";
+         
             // 
             // lblDOB
             // 
@@ -97,13 +99,13 @@
             lblDOB.Size = new Size(99, 15);
             lblDOB.TabIndex = 6;
             lblDOB.Text = "*Insert DOB here*";
+            lblDOB.Click += lblDOB_Click;
             // 
             // NewPersonForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(784, 441);
             Controls.Add(lblDOB);
             Controls.Add(lblAge);
             Controls.Add(lblName);
@@ -112,14 +114,8 @@
             Controls.Add(txtAge);
             Controls.Add(txtName);
             Name = "NewPersonForm";
+            Size = new Size(784, 441);
             Load += UI_Load;
-            Controls.SetChildIndex(txtName, 0);
-            Controls.SetChildIndex(txtAge, 0);
-            Controls.SetChildIndex(txtDOB, 0);
-            Controls.SetChildIndex(btnComplete, 0);
-            Controls.SetChildIndex(lblName, 0);
-            Controls.SetChildIndex(lblAge, 0);
-            Controls.SetChildIndex(lblDOB, 0);
             ResumeLayout(false);
             PerformLayout();
         }
